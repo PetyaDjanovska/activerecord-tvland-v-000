@@ -11,6 +11,6 @@ class Character < ActiveRecord::Base
   end
 
   def build_network(call_letters)
-    self.show.network = Network.create(call_letters)
+    self.show.build_network(call_letters)
   end
 end
