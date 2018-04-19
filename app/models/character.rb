@@ -10,7 +10,7 @@ class Character < ActiveRecord::Base
     self.show = Show.create(name)
   end
 
-  def build_network
-
+  def build_network(call_letters)
+    self.show.network = Network.create(call_letters)
   end
 end
